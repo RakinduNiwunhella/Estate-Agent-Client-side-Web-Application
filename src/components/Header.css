@@ -1,0 +1,114 @@
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+}
+/* Top bar */
+.top-bar {
+  background: #10077a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 40px;
+  font-size: 14px;
+    vertical-align: middle;
+
+}
+.top-left {
+  display: flex;
+  align-items: center;  
+  gap: 3px;
+}
+.top-bar-icon{
+  font-size: 14px;  
+  vertical-align: middle;
+  margin-left: 6px;
+
+
+}
+
+/* Main nav */
+.main-nav {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Logo */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  background: #10077a;
+  padding: 3px;
+  border-radius: 12px;
+  font-size: 24px;
+  width: 40px;
+}
+
+.logo-section h1 {
+  margin: 0;
+  font-size: 23px;
+  color: #10077a;
+}
+
+.logo-section p {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Nav links */
+.nav-links a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #374151;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #10077a;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  color: #10077a;
+}
+
+.nav-links a:hover{
+    color: #10077a;
+ }
+
+/* Favourite button */
+.fav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.heart-icon {
+  font-size: 28px;
+  color: #10077a;
+  transition: color 0.25s ease, font-variation-settings 0.25s ease, transform 0.15s ease;
+}
+
+.fav-btn:hover .heart-icon {
+  color: #e11d48; 
+  transform: scale(1.15);
+}
