@@ -6,8 +6,11 @@
 }
 /* Top bar */
 .top-bar {
-  background: #10077a;
-  color: white;
+  background: linear-gradient(
+  135deg,
+  #0f172a,
+  #1e1b4b
+);  color: white;
   display: flex;
   justify-content: space-between;
   padding: 8px 40px;
