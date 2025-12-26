@@ -1,5 +1,5 @@
 {
-	"properties": [
+  "properties": [
         {
             "id":"prop1",
 			"type":"House",
@@ -8,13 +8,22 @@
 			"tenure":"Freehold",
 			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture":"images/prop1pic1small.jpg",
+			"picture":"images/properties/property1/property1-1.jpeg",
 			"url":"properties/prop1.html",
             "added": {
                 "month":"October",
                 "day":12,
                 "year":2022
-            }
+            },
+            "images":[
+              "images/properties/property1/property1-2.jpeg",
+              "images/properties/property1/property1-3.jpeg",
+              "images/properties/property1/property1-4.jpeg",
+              "images/properties/property1/property1-5.jpeg",
+              "images/properties/property1/property1-6.jpeg",
+              "images/properties/property1/property1-7.jpeg",
+              "images/properties/property1/property1-8.jpeg"
+            ]
         },
 		{
             "id":"prop2",
@@ -24,13 +33,22 @@
 			"tenure":"Freehold",
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road Orpington BR6",
-			"picture":"images/prop2pic1small.jpg",
+			"picture":"images/properties/property2/property2-1.jpeg",
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
                 "day":14,
                 "year":2022
-            }
+            },
+            "images":[
+              "images/properties/property2/property2-2.jpeg",
+              "images/properties/property2/property2-3.jpeg",
+              "images/properties/property2/property2-4.jpeg",
+              "images/properties/property2/property2-5.jpeg",
+              "images/properties/property2/property2-6.jpeg",
+              "images/properties/property2/property2-7.jpeg",
+              "images/properties/property2/property2-8.jpeg"
+            ]
         },
 {
   "id": "prop3",
@@ -40,13 +58,22 @@
   "tenure": "Freehold",
   "description": "Spacious four bedroom detached house located in a quiet residential area. Features include a large open-plan kitchen, private garden, garage, and modern interiors throughout.",
   "location": "Chislehurst Road, Orpington BR7",
-  "picture": "images/prop3pic1small.jpg",
+  "picture": "images/properties/property3/property3-1.jpeg",
   "url": "properties/prop3.html",
   "added": {
     "month": "August",
     "day": 3,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property3/property3-2.jpeg",
+    "images/properties/property3/property3-3.jpeg",
+    "images/properties/property3/property3-4.jpeg",
+    "images/properties/property3/property3-5.jpeg",
+    "images/properties/property3/property3-6.jpeg",
+    "images/properties/property3/property3-7.jpeg",
+    "images/properties/property3/property3-8.jpeg"
+  ]
 },
 {
   "id": "prop4",
@@ -56,13 +83,22 @@
   "tenure": "Leasehold",
   "description": "Modern one bedroom apartment ideal for first-time buyers. Open-plan living space, balcony access, and excellent transport links nearby.",
   "location": "High Street, Bromley BR1",
-  "picture": "images/prop4pic1small.jpg",
+  "picture": "images/properties/property4/property4-1.jpg",
   "url": "properties/prop4.html",
   "added": {
     "month": "July",
     "day": 21,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property4/property4-2.jpg",
+    "images/properties/property4/property4-3.jpg",
+    "images/properties/property4/property4-4.jpg",
+    "images/properties/property4/property4-5.jpg",
+    "images/properties/property4/property4-6.jpg",
+    "images/properties/property4/property4-7.jpg",
+    "images/properties/property4/property4-8.jpg"
+  ]
 },
 {
   "id": "prop5",
@@ -72,13 +108,22 @@
   "tenure": "Freehold",
   "description": "Well-maintained two bedroom bungalow with front and rear gardens. Recently refurbished kitchen and bathroom with off-street parking.",
   "location": "Oakwood Avenue, Sidcup DA15",
-  "picture": "images/prop5pic1small.jpg",
+  "picture": "images/properties/property5/property5-1.webp",
   "url": "properties/prop5.html",
   "added": {
     "month": "June",
     "day": 10,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property5/property5-2.webp",
+    "images/properties/property5/property5-3.webp",
+    "images/properties/property5/property5-4.webp",
+    "images/properties/property5/property5-5.webp",
+    "images/properties/property5/property5-6.webp",
+    "images/properties/property5/property5-7.webp",
+    "images/properties/property5/property5-8.webp"
+  ]
 },
 {
   "id": "prop6",
@@ -88,13 +133,22 @@
   "tenure": "Freehold",
   "description": "Luxury five bedroom family home offering premium finishes, landscaped garden, home office, and excellent school catchment area.",
   "location": "Elmstead Lane, Chislehurst BR7",
-  "picture": "images/prop6pic1small.jpg",
+  "picture": "images/properties/property6/property6-1.jpeg",
   "url": "properties/prop6.html",
   "added": {
     "month": "May",
     "day": 5,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property6/property6-2.jpeg",
+    "images/properties/property6/property6-3.jpeg",
+    "images/properties/property6/property6-4.jpeg",
+    "images/properties/property6/property6-5.jpeg",
+    "images/properties/property6/property6-6.jpeg",
+    "images/properties/property6/property6-7.jpeg",
+    "images/properties/property6/property6-8.jpeg"
+  ]
 },
 {
   "id": "prop7",
@@ -104,13 +158,22 @@
   "tenure": "Leasehold",
   "description": "Three bedroom penthouse apartment with panoramic views, lift access, and secure underground parking.",
   "location": "Station Approach, Lewisham SE13",
-  "picture": "images/prop7pic1small.jpg",
+  "picture": "images/properties/property7/property7-1.jpg",
   "url": "properties/prop7.html",
   "added": {
     "month": "April",
     "day": 18,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property7/property7-2.jpg",
+    "images/properties/property7/property7-3.jpg",
+    "images/properties/property7/property7-4.jpg",
+    "images/properties/property7/property7-5.jpg",
+    "images/properties/property7/property7-6.jpg",
+    "images/properties/property7/property7-7.jpg",
+    "images/properties/property7/property7-8.jpg"
+  ]
 },
 {
   "id": "prop8",
@@ -120,12 +183,21 @@
   "tenure": "Freehold",
   "description": "Charming three bedroom period property with original features, modern extensions, and close proximity to local parks and schools.",
   "location": "Manor Road, Beckenham BR3",
-  "picture": "images/prop8pic1small.jpg",
+  "picture": "images/properties/property8/property8-1.jpeg",
   "url": "properties/prop8.html",
   "added": {
     "month": "March",
     "day": 2,
     "year": 2022
-  }
+  },
+  "images":[
+    "images/properties/property8/property8-2.jpeg",
+    "images/properties/property8/property8-3.jpeg",
+    "images/properties/property8/property8-4.jpeg",
+    "images/properties/property8/property8-5.jpeg",
+    "images/properties/property8/property8-6.jpeg",
+    "images/properties/property8/property8-7.jpeg",
+    "images/properties/property8/property8-8.jpeg"
+  ]
 }
 ]}
