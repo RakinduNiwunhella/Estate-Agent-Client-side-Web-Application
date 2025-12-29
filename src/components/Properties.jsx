@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import data from "../assets/properties.json";
 import "./Properties.css";
 
-export const Properties = () => {
+export const Properties = ({ favourites, addToFavourites }) => {
   const properties = data.properties;
+
   return (
     <div className="properties-wrapper">
       <div className="search-card">
@@ -33,21 +34,46 @@ export const Properties = () => {
         <div className="divider"></div>
 
         <p className="results">
-        <span>{properties.length}</span>
-        properties found
+          <span>{properties.length}</span> properties found
         </p>
       </div>
 
-      {/* Property Cards */}
+      {/* PROPERTY CARDS */}
       <div className="property-grid">
-        {properties.map((p) => (
-          <Link to={`/property/${p.id}`} className="property-link" key={p.id}>
-            <div className="property-card">
-              <div className="image-wrapper">
-                <img src={p.picture} alt={p.type} />
-                <span className="price">£{p.price.toLocaleString()}</span>
-                <button className="fav-btn">♡</button>
-              </div>
+        {properties.map((p) => {
+          const isFavourite = favourites.includes(p.id);
+
+          return (
+            <div
+              key={p.id}
+              className="property-card"
+              draggable
+              onDragStart={(e) =>
+                e.dataTransfer.setData("propertyId", p.id)
+              }
+            >
+              <Link to={`/property/${p.id}`} className="property-link">
+                <div className="image-wrapper">
+                  <img src={p.picture} alt={p.type} />
+                  <span className="price">
+                    £{p.price.toLocaleString()}
+                  </span>
+                </div>
+              </Link>
+
+              {/* FAVOURITE BUTTON */}
+              <button
+                className="fav-btn"
+                onClick={() => addToFavourites(p.id)}
+                disabled={isFavourite}
+                title={
+                  isFavourite
+                    ? "Already in favourites"
+                    : "Add to favourites"
+                }
+              >
+                {isFavourite ? "❤️" : "♡"}
+              </button>
 
               <div className="card-body">
                 <h3>
@@ -65,21 +91,18 @@ export const Properties = () => {
                   <span className="date">
                     📅 {p.added.day}/{p.added.month}/{p.added.year}
                   </span>
-                  <a href="#" className="details">
+                  <Link
+                    to={`/property/${p.id}`}
+                    className="details"
+                  >
                     View Details →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
-          </Link>
-        ))}
+          );
+        })}
       </div>
-
-
-
-
-
-
     </div>
   );
 };

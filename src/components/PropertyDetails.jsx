@@ -3,7 +3,7 @@ import "./PropertyDetails.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-function PropertyDetails({ property }) {
+function PropertyDetails({ property, favourites, addToFavourites, removeFromFavourites }) {
   const allImages = [property.picture, ...property.images];
   const [current, setCurrent] = useState(0);
 
@@ -27,7 +27,21 @@ function PropertyDetails({ property }) {
         </h1>
 
         <div className="property-actions">
-          <button className="icon-btn">♡</button>
+          <button
+            className="icon-btn"
+            onClick={() =>
+              favourites.includes(property.id)
+                ? removeFromFavourites(property.id)
+                : addToFavourites(property.id)
+            }
+            title={
+              favourites.includes(property.id)
+                ? "Remove from favourites"
+                : "Add to favourites"
+            }
+          >
+            {favourites.includes(property.id) ? "❤️" : "♡"}
+          </button>
         </div>
       </div>
 
@@ -38,7 +52,7 @@ function PropertyDetails({ property }) {
       {/* IMAGE GALLERY */}
       <div className="gallery">
         <div className="main-image">
-          <img src={allImages[current]} alt="Property" />
+          <img src={allImages[current]} alt="Property" draggable={false} />
           <button className="nav left" onClick={prevImage}>‹</button>
           <button className="nav right" onClick={nextImage}>›</button>
         </div>

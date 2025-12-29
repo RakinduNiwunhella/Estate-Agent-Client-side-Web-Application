@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="header-wrapper">
       
@@ -37,7 +39,11 @@ const Header = () => {
           <a href="#">Contact</a>
         </nav>
 
-        <button className="fav-btn">
+        <button
+          className="fav-btn"
+          onClick={() => navigate("/favourites")}
+          title="View favourites"
+        >
           <span className="material-symbols-outlined heart-icon">favorite</span>
         </button>
       </div>
