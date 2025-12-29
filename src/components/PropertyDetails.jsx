@@ -103,9 +103,14 @@ function PropertyDetails({ property }) {
     </TabPanel>
 
     {/* FLOOR PLAN TAB */}
-    <TabPanel>
-      <p>Floor plan will be shown here.</p>
-    </TabPanel>
+  <TabPanel>
+    <div className="property-floorplan">
+      <img
+        src={property.floorPlan}
+        alt="Property floor plan"
+      />
+    </div>
+  </TabPanel>
 
     {/* MAP TAB */}
     <TabPanel>

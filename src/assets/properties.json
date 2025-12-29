@@ -23,7 +23,8 @@
               "/images/properties/property1/property1-6.jpeg",
               "/images/properties/property1/property1-7.jpeg",
               "/images/properties/property1/property1-8.jpeg"
-            ]
+            ],
+            "floorPlan": "/images/properties/property1/property1-floorplan.png"
         },
 		{
             "id":"prop2",
@@ -48,7 +49,9 @@
               "/images/properties/property2/property2-6.jpeg",
               "/images/properties/property2/property2-7.jpeg",
               "/images/properties/property2/property2-8.jpeg"
-            ]
+            ],
+                        "floorPlan": "/images/properties/property2/property2-floorplan.png"
+
         },
 {
   "id": "prop3",
@@ -73,7 +76,9 @@
     "/images/properties/property3/property3-6.jpeg",
     "/images/properties/property3/property3-7.jpeg",
     "/images/properties/property3/property3-8.jpeg"
-  ]
+  ],
+              "floorPlan": "/images/properties/property3/property3-floorplan.png"
+
 },
 {
   "id": "prop4",
@@ -98,7 +103,9 @@
     "/images/properties/property4/property4-6.jpg",
     "/images/properties/property4/property4-7.jpg",
     "/images/properties/property4/property4-8.jpg"
-  ]
+  ],
+              "floorPlan": "/images/properties/property4/property4-floorplan.png"
+
 },
 {
   "id": "prop5",
@@ -123,7 +130,9 @@
     "/images/properties/property5/property5-6.webp",
     "/images/properties/property5/property5-7.webp",
     "/images/properties/property5/property5-8.webp"
-  ]
+  ],
+              "floorPlan": "/images/properties/property5/property5-floorplan.png"
+
 },
 {
   "id": "prop6",
@@ -149,6 +158,8 @@
     "/images/properties/property6/property6-7.jpeg",
     "/images/properties/property6/property6-8.jpeg"
   ]
+  ,            "floorPlan": "/images/properties/property6/property6-floorplan.png"
+
 },
 {
   "id": "prop7",
@@ -173,7 +184,9 @@
     "/images/properties/property7/property7-6.jpg",
     "/images/properties/property7/property7-7.jpg",
     "/images/properties/property7/property7-8.jpg"
-  ]
+  ],
+              "floorPlan": "/images/properties/property7/property7-floorplan.png"
+
 },
 {
   "id": "prop8",
@@ -198,6 +211,8 @@
     "/images/properties/property8/property8-6.jpeg",
     "/images/properties/property8/property8-7.jpeg",
     "/images/properties/property8/property8-8.jpeg"
-  ]
+  ],
+              "floorPlan": "/images/properties/property8/property8-floorplan.png"
+
 }
 ]}
