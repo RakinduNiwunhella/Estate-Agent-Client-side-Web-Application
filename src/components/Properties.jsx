@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../assets/properties.json";
 import "./Properties.css";
 
 export const Properties = ({ favourites, addToFavourites }) => {
   const properties = data.properties;
+
+  const [searchText, setSearchText] = useState("");
 
   return (
     <div className="properties-wrapper">
@@ -13,9 +15,11 @@ export const Properties = ({ favourites, addToFavourites }) => {
           <div className="search-input">
             <span className="icon">🔍</span>
             <input
-              type="text"
-              placeholder="Search by postcode or area..."
-            />
+            type="text"
+            placeholder="Search by postcode or area..."
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           </div>
 
           <button className="filter-btn">
@@ -34,13 +38,29 @@ export const Properties = ({ favourites, addToFavourites }) => {
         <div className="divider"></div>
 
         <p className="results">
-          <span>{properties.length}</span> properties found
-        </p>
+<span>
+  {
+    properties.filter((p) =>
+      p.location
+        .toLowerCase()
+        .includes(searchText.toLowerCase())
+    ).length
+  }
+</span>{" "}
+properties found        </p>
       </div>
 
       {/* PROPERTY CARDS */}
       <div className="property-grid">
-        {properties.map((p) => {
+        {properties
+          .filter((p) => {
+            if (!searchText) return true;
+
+            return p.location
+              .toLowerCase()
+              .includes(searchText.toLowerCase());
+          })
+          .map((p) => {
           const isFavourite = favourites.includes(p.id);
 
           return (
