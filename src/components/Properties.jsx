@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../assets/properties.json";
 import "./Properties.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import {
+  FaHome,
+  FaPoundSign,
+  FaBed,
+  FaMapMarkerAlt,
+  FaHeart,
+  FaRegHeart,
+  FaCalendarAlt
+} from "react-icons/fa";
 
 export const Properties = ({ favourites, addToFavourites }) => {
   const properties = data.properties;
@@ -12,8 +23,8 @@ export const Properties = ({ favourites, addToFavourites }) => {
   maxPrice: "",
   minBeds: "",
   maxBeds: "",
-  dateFrom: "",
-  dateTo: "",
+  dateFrom: null,
+  dateTo: null,
   postcode: ""
 });
 const resetFilters = () => {
@@ -23,8 +34,8 @@ const resetFilters = () => {
     maxPrice: "",
     minBeds: "",
     maxBeds: "",
-    dateFrom: "",
-    dateTo: "",
+    dateFrom: null,
+    dateTo: null,
     postcode: ""
   });
 };
@@ -43,21 +54,20 @@ const filteredProperties = properties.filter((p) => {
   if (filters.minBeds && p.bedrooms < filters.minBeds) return false;
   if (filters.maxBeds && p.bedrooms > filters.maxBeds) return false;
 
-  // 5. DATE ADDED
-  if (filters.dateFrom || filters.dateTo) {
-    const propertyDate = new Date(
-      `${p.added.year}-${p.added.month}-${p.added.day}`
-    );
+// 5. DATE ADDED
+if (filters.dateFrom || filters.dateTo) {
+  const propertyDate = new Date(
+    `${p.added.year}-${p.added.month}-${p.added.day}`
+  );
 
-    if (filters.dateFrom && propertyDate < new Date(filters.dateFrom)) {
-      return false;
-    }
-
-    if (filters.dateTo && propertyDate > new Date(filters.dateTo)) {
-      return false;
-    }
+  if (filters.dateFrom && propertyDate < filters.dateFrom) {
+    return false;
   }
 
+  if (filters.dateTo && propertyDate > filters.dateTo) {
+    return false;
+  }
+}
   // 6. POSTCODE AREA (first part only)
   if (filters.postcode) {
     const postcode = p.location.split(" ").pop().toUpperCase();
@@ -74,7 +84,7 @@ const filteredProperties = properties.filter((p) => {
         <div className="filters-row">
 
   <div className="filter-field">
-    <span className="filter-icon">🏠</span>
+    <span className="filter-icon"><FaHome /></span>
     <select
       value={filters.type}
       onChange={(e) =>
@@ -88,10 +98,11 @@ const filteredProperties = properties.filter((p) => {
   </div>
 
   <div className="filter-field">
-    <span className="filter-icon">£</span>
+    <span className="filter-icon"><FaPoundSign /></span>
     <input
       type="number"
       placeholder="Min Price"
+      value={filters.minPrice}
       onChange={(e) =>
         setFilters({ ...filters, minPrice: e.target.value })
       }
@@ -99,10 +110,11 @@ const filteredProperties = properties.filter((p) => {
   </div>
 
   <div className="filter-field">
-    <span className="filter-icon">£</span>
+    <span className="filter-icon"><FaPoundSign /></span>
     <input
       type="number"
       placeholder="Max Price"
+      value={filters.maxPrice}
       onChange={(e) =>
         setFilters({ ...filters, maxPrice: e.target.value })
       }
@@ -110,10 +122,11 @@ const filteredProperties = properties.filter((p) => {
   </div>
 
   <div className="filter-field">
-    <span className="filter-icon">🛏</span>
+    <span className="filter-icon"><FaBed /></span>
     <input
       type="number"
       placeholder="Min Beds"
+      value={filters.minBeds}
       onChange={(e) =>
         setFilters({ ...filters, minBeds: e.target.value })
       }
@@ -121,10 +134,11 @@ const filteredProperties = properties.filter((p) => {
   </div>
 
   <div className="filter-field">
-    <span className="filter-icon">🛏</span>
+    <span className="filter-icon"><FaBed /></span>
     <input
       type="number"
       placeholder="Max Beds"
+      value={filters.maxBeds}
       onChange={(e) =>
         setFilters({ ...filters, maxBeds: e.target.value })
       }
@@ -132,34 +146,39 @@ const filteredProperties = properties.filter((p) => {
   </div>
 
   <div className="filter-field">
-    <span className="filter-icon">📅</span>
-    <input
-      type="date"
-      title="Date added from"
-      aria-label="Date added from"
-      onChange={(e) =>
-        setFilters({ ...filters, dateFrom: e.target.value })
+    <span className="filter-icon"><FaCalendarAlt /></span>
+    <DatePicker
+      key={filters.dateFrom}
+      selected={filters.dateFrom}
+      onChange={(date) =>
+        setFilters({ ...filters, dateFrom: date })
       }
+      placeholderText="Added from"
+      className="date-picker"
+      maxDate={filters.dateTo}
     />
   </div>
 
-  <div className="filter-field">
-    <span className="filter-icon">📅</span>
-    <input
-      type="date"
-      title="Date added to"
-      aria-label="Date added to"
-      onChange={(e) =>
-        setFilters({ ...filters, dateTo: e.target.value })
-      }
-    />
-  </div>
+ <div className="filter-field">
+  <span className="filter-icon"><FaCalendarAlt /></span>
+  <DatePicker
+    key={filters.dateTo}
+    selected={filters.dateTo}
+    onChange={(date) =>
+      setFilters({ ...filters, dateTo: date })
+    }
+    placeholderText="Added to"
+    className="date-picker"
+    minDate={filters.dateFrom}
+  />
+</div>
 
   <div className="filter-field">
-    <span className="filter-icon">📍</span>
+    <span className="filter-icon"><FaMapMarkerAlt /></span>
     <input
       type="text"
       placeholder="Postcode"
+      value={filters.postcode}
       onChange={(e) =>
         setFilters({ ...filters, postcode: e.target.value })
       }
@@ -216,7 +235,7 @@ properties found        </p>
                 onClick={() => addToFavourites(p.id)}
                 title={isFavourite ? "Remove from favourites" : "Add to favourites"}
               >
-                {isFavourite ? "❤️" : "♡"}
+                {isFavourite ? <FaHeart color="#ef4444" /> : <FaRegHeart />}
               </button>
 
               <div className="card-body">
@@ -224,16 +243,18 @@ properties found        </p>
                   {p.type} • {p.bedrooms} Bedroom
                 </h3>
 
-                <p className="location">📍 {p.location}</p>
+                <p className="location">
+                  <FaMapMarkerAlt /> {p.location}
+                </p>
 
                 <div className="meta">
-                  <span>🛏 {p.bedrooms} beds</span>
-                  <span>🏠 {p.type}</span>
+                  <span><FaBed /> {p.bedrooms} beds</span>
+                  <span><FaHome /> {p.type}</span>
                 </div>
 
                 <div className="card-footer">
                   <span className="date">
-                    📅 {p.added.day}/{p.added.month}/{p.added.year}
+                    <FaCalendarAlt /> {p.added.day}/{p.added.month}/{p.added.year}
                   </span>
                   <Link
                     to={`/property/${p.id}`}

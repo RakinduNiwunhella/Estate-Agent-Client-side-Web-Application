@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 /* PAGE WRAPPER */
 .properties-wrapper {
   padding: 32px;
@@ -38,21 +39,30 @@
   position: relative;
   flex: 1 1 130px;
   min-width: 130px;
+  display: flex;
+  align-items: center;
 }
 
+/* Icons for normal inputs */
 .filter-icon {
   position: absolute;
-  left: 12px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
   color: #6b7280;
   pointer-events: none;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Inputs & selects */
 .filter-field input,
 .filter-field select,
-.reset-btn {
+.react-datepicker__input-container input {
   width: 100%;
   height: 44px;
   padding: 0 14px 0 38px;
@@ -63,6 +73,7 @@
   color: #111827;
 }
 
+/* Select arrow */
 .filter-field select {
   padding-right: 34px;
   appearance: none;
@@ -76,16 +87,50 @@
   background-repeat: no-repeat;
 }
 
+/* Focus state */
 .filter-field input:focus,
 .filter-field select:focus {
   outline: none;
   border-color: #4f46e5;
 }
 
+/* RESET BUTTON */
 .reset-btn {
-  padding-left: 0;
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
   background: #f9fafb;
+  font-size: 14px;
   font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background: #f3f4f6;
+}
+
+.reset-btn:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Date picker input */
+.date-picker {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px 0 38px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #ffffff;
+  color: #111827;
+}
+
+/* React-datepicker wrapper */
+.react-datepicker-wrapper {
+  width: 100%;
 }
 
 /* PROPERTY GRID */
@@ -183,25 +228,6 @@
     padding: 20px;
   }
 }
-
-.reset-btn {
-  width: 100%;
-  height: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  background: #f9fafb;
-  font-size: 14px;
-  font-weight: 500;
-  color: #374151;
-  cursor: pointer;
-}
-
-.reset-btn:hover {
-  background: #f3f4f6;
-}
-
-.reset-btn:focus {
-  outline: none;
-  border-color: #4f46e5;
+.filter-field .filter-icon {
+  z-index: 2;
 }
