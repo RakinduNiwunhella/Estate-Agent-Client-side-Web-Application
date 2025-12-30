@@ -10,6 +10,7 @@ import { useState } from "react";
 import data from "./assets/properties.json";
 import { useParams } from "react-router-dom";
 import Favourite from "./components/Favourites";
+import Services from "./components/Services";
 
 function PropertyDetailsWrapper({ favourites, addToFavourites, removeFromFavourites }) {  const { id } = useParams();
  const property = data.properties.find(
@@ -43,6 +44,7 @@ function Home({ favourites, addToFavourites, removeFromFavourites, clearFavourit
   clearFavourites={clearFavourites}
 />
       <About />
+      <Services />
     </>
   );
 }
@@ -80,6 +82,7 @@ const clearFavourites = () => {
     />
   }
 />
+<Route path="/services" element={<Services />} />
 <Route
   path="/favourites"
   element={
