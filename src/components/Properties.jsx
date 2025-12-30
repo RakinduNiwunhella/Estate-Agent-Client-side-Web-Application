@@ -16,6 +16,18 @@ export const Properties = ({ favourites, addToFavourites }) => {
   dateTo: "",
   postcode: ""
 });
+const resetFilters = () => {
+  setFilters({
+    type: "Any",
+    minPrice: "",
+    maxPrice: "",
+    minBeds: "",
+    maxBeds: "",
+    dateFrom: "",
+    dateTo: "",
+    postcode: ""
+  });
+};
 const filteredProperties = properties.filter((p) => {
 
   // 2. TYPE
@@ -123,6 +135,8 @@ const filteredProperties = properties.filter((p) => {
     <span className="filter-icon">📅</span>
     <input
       type="date"
+      title="Date added from"
+      aria-label="Date added from"
       onChange={(e) =>
         setFilters({ ...filters, dateFrom: e.target.value })
       }
@@ -133,6 +147,8 @@ const filteredProperties = properties.filter((p) => {
     <span className="filter-icon">📅</span>
     <input
       type="date"
+      title="Date added to"
+      aria-label="Date added to"
       onChange={(e) =>
         setFilters({ ...filters, dateTo: e.target.value })
       }
@@ -148,6 +164,16 @@ const filteredProperties = properties.filter((p) => {
         setFilters({ ...filters, postcode: e.target.value })
       }
     />
+  </div>
+
+  <div className="filter-field">
+    <button
+      type="button"
+      className="reset-btn"
+      onClick={resetFilters}
+    >
+      Reset
+    </button>
   </div>
 
 </div>
