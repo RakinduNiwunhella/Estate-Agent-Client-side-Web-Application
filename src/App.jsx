@@ -51,7 +51,9 @@ function App() {
   const [favourites, setFavourites] = useState([]);
   const addToFavourites = (id) => {
   setFavourites((prev) =>
-    prev.includes(id) ? prev : [...prev, id]
+    prev.includes(id)
+      ? prev.filter((fav) => fav !== id) // remove if already added
+      : [...prev, id]                    // add if not present
   );
 };
 

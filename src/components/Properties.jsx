@@ -6,45 +6,156 @@ import "./Properties.css";
 export const Properties = ({ favourites, addToFavourites }) => {
   const properties = data.properties;
 
-  const [searchText, setSearchText] = useState("");
+  const [filters, setFilters] = useState({
+  type: "Any",
+  minPrice: "",
+  maxPrice: "",
+  minBeds: "",
+  maxBeds: "",
+  dateFrom: "",
+  dateTo: "",
+  postcode: ""
+});
+const filteredProperties = properties.filter((p) => {
 
+  // 2. TYPE
+  if (filters.type !== "Any" && p.type !== filters.type) {
+    return false;
+  }
+
+  // 3. PRICE
+  if (filters.minPrice && p.price < filters.minPrice) return false;
+  if (filters.maxPrice && p.price > filters.maxPrice) return false;
+
+  // 4. BEDROOMS
+  if (filters.minBeds && p.bedrooms < filters.minBeds) return false;
+  if (filters.maxBeds && p.bedrooms > filters.maxBeds) return false;
+
+  // 5. DATE ADDED
+  if (filters.dateFrom || filters.dateTo) {
+    const propertyDate = new Date(
+      `${p.added.year}-${p.added.month}-${p.added.day}`
+    );
+
+    if (filters.dateFrom && propertyDate < new Date(filters.dateFrom)) {
+      return false;
+    }
+
+    if (filters.dateTo && propertyDate > new Date(filters.dateTo)) {
+      return false;
+    }
+  }
+
+  // 6. POSTCODE AREA (first part only)
+  if (filters.postcode) {
+    const postcode = p.location.split(" ").pop().toUpperCase();
+    if (!postcode.startsWith(filters.postcode.toUpperCase())) {
+      return false;
+    }
+  }
+
+  return true;
+});
   return (
     <div className="properties-wrapper">
       <div className="search-card">
-        <div className="search-row">
-          <div className="search-input">
-            <span className="icon">🔍</span>
-            <input
-            type="text"
-            placeholder="Search by postcode or area..."
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-          </div>
+        <div className="filters-row">
 
-          <button className="filter-btn">
-            <span className="filter-icon">☰</span>
-            Filters
-            <span className="badge">1</span>
-          </button>
+  <div className="filter-field">
+    <span className="filter-icon">🏠</span>
+    <select
+      value={filters.type}
+      onChange={(e) =>
+        setFilters({ ...filters, type: e.target.value })
+      }
+    >
+      <option value="Any">Any Type</option>
+      <option value="House">House</option>
+      <option value="Flat">Flat</option>
+    </select>
+  </div>
 
-          <select className="sort-select">
-            <option>Most Recent</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-          </select>
-        </div>
+  <div className="filter-field">
+    <span className="filter-icon">£</span>
+    <input
+      type="number"
+      placeholder="Min Price"
+      onChange={(e) =>
+        setFilters({ ...filters, minPrice: e.target.value })
+      }
+    />
+  </div>
 
-        <div className="divider"></div>
+  <div className="filter-field">
+    <span className="filter-icon">£</span>
+    <input
+      type="number"
+      placeholder="Max Price"
+      onChange={(e) =>
+        setFilters({ ...filters, maxPrice: e.target.value })
+      }
+    />
+  </div>
+
+  <div className="filter-field">
+    <span className="filter-icon">🛏</span>
+    <input
+      type="number"
+      placeholder="Min Beds"
+      onChange={(e) =>
+        setFilters({ ...filters, minBeds: e.target.value })
+      }
+    />
+  </div>
+
+  <div className="filter-field">
+    <span className="filter-icon">🛏</span>
+    <input
+      type="number"
+      placeholder="Max Beds"
+      onChange={(e) =>
+        setFilters({ ...filters, maxBeds: e.target.value })
+      }
+    />
+  </div>
+
+  <div className="filter-field">
+    <span className="filter-icon">📅</span>
+    <input
+      type="date"
+      onChange={(e) =>
+        setFilters({ ...filters, dateFrom: e.target.value })
+      }
+    />
+  </div>
+
+  <div className="filter-field">
+    <span className="filter-icon">📅</span>
+    <input
+      type="date"
+      onChange={(e) =>
+        setFilters({ ...filters, dateTo: e.target.value })
+      }
+    />
+  </div>
+
+  <div className="filter-field">
+    <span className="filter-icon">📍</span>
+    <input
+      type="text"
+      placeholder="Postcode"
+      onChange={(e) =>
+        setFilters({ ...filters, postcode: e.target.value })
+      }
+    />
+  </div>
+
+</div>
 
         <p className="results">
 <span>
   {
-    properties.filter((p) =>
-      p.location
-        .toLowerCase()
-        .includes(searchText.toLowerCase())
-    ).length
+    filteredProperties.length
   }
 </span>{" "}
 properties found        </p>
@@ -52,15 +163,7 @@ properties found        </p>
 
       {/* PROPERTY CARDS */}
       <div className="property-grid">
-        {properties
-          .filter((p) => {
-            if (!searchText) return true;
-
-            return p.location
-              .toLowerCase()
-              .includes(searchText.toLowerCase());
-          })
-          .map((p) => {
+        {filteredProperties.map((p) => {
           const isFavourite = favourites.includes(p.id);
 
           return (
@@ -85,12 +188,7 @@ properties found        </p>
               <button
                 className="fav-btn"
                 onClick={() => addToFavourites(p.id)}
-                disabled={isFavourite}
-                title={
-                  isFavourite
-                    ? "Already in favourites"
-                    : "Add to favourites"
-                }
+                title={isFavourite ? "Remove from favourites" : "Add to favourites"}
               >
                 {isFavourite ? "❤️" : "♡"}
               </button>
