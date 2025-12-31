@@ -12,12 +12,19 @@ import {
   FaRegHeart
 } from "react-icons/fa";
 
+import Favourite from "./Favourites";
+
 /* MUI DATE PICKER */
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
-export const Properties = ({ favourites, addToFavourites }) => {
+export const Properties = ({
+  favourites,
+  addToFavourites,
+  removeFromFavourites,
+  clearFavourites,
+}) => {
   const properties = data.properties;
 
   const [filters, setFilters] = useState({
@@ -206,6 +213,14 @@ export const Properties = ({ favourites, addToFavourites }) => {
         <p className="results">
           <span>{filteredProperties.length}</span> properties found
         </p>
+
+        <Favourite
+          favourites={favourites}
+          properties={properties}
+          addToFavourites={addToFavourites}
+          removeFromFavourites={removeFromFavourites}
+          clearFavourites={clearFavourites}
+        />
       </div>
 
       {/* PROPERTY GRID */}

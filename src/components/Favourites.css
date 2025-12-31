@@ -1,8 +1,6 @@
 
 
-/* =========================
-   FAVOURITES PANEL
-   ========================= */
+   /* FAVOURITES PANEL */
 
 .favourites-list {
   position: sticky;
@@ -21,9 +19,8 @@
   color: #111827;
 }
 
-/* =========================
-   FAVOURITE ITEM
-   ========================= */
+/* 
+   /* FAVOURITE ITEM */
 
 .favourite-item {
   display: flex;
@@ -43,9 +40,7 @@
   color: #111827;
 }
 
-/* =========================
-   REMOVE BUTTON
-   ========================= */
+   /* REMOVE BUTTON */
 
 .favourite-item button {
   background: none;
@@ -59,9 +54,7 @@
   text-decoration: underline;
 }
 
-/* =========================
-   CLEAR BUTTON
-   ========================= */
+   /* CLEAR BUTTON */
 
 .clear-favourites {
   width: 100%;
@@ -78,9 +71,8 @@
   opacity: 0.9;
 }
 
-/* =========================
-   EMPTY STATE
-   ========================= */
+
+   /* EMPTY STATE */
 
 .favourites-list p {
   font-size: 14px;
