@@ -76,7 +76,7 @@ export const Properties = ({ favourites, addToFavourites }) => {
   });
 
   return (
-    <div className="properties-wrapper">
+    <div className="properties-wrapper" id="properties">
       <div className="search-card">
         <div className="filters-row">
 

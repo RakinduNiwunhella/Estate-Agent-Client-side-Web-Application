@@ -13,7 +13,7 @@ import {
 
 function Services() {
   return (
-    <div className="services-page">
+    <div className="services-page" id="services">
       <header className="services-hero">
         <h1>Our Services</h1>
         <p>

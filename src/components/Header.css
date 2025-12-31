@@ -4,32 +4,6 @@
   z-index: 1000;
 
 }
-/* Top bar */
-.top-bar {
-  background: linear-gradient(
-  135deg,
-  #0f172a,
-  #1e1b4b
-);  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 40px;
-  font-size: 14px;
-    vertical-align: middle;
-
-}
-.top-left {
-  display: flex;
-  align-items: center;  
-  gap: 3px;
-}
-.top-bar-icon{
-  font-size: 14px;  
-  vertical-align: middle;
-  margin-left: 6px;
-
-
-}
 
 /* Main nav */
 .main-nav {
@@ -71,10 +45,10 @@
 /* Nav links */
 .nav-links a {
   position: relative;
-  margin: 0 15px;
   text-decoration: none;
   color: #374151;
-  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a::after {
@@ -102,16 +76,27 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
 }
 
 .heart-icon {
-  font-size: 28px;
+  font-size: 22px;
   color: #10077a;
-  transition: color 0.25s ease, font-variation-settings 0.25s ease, transform 0.15s ease;
+  display: flex;
+  align-items: center;
+  transition: color 0.25s ease, transform 0.15s ease;
 }
 
 .fav-btn:hover .heart-icon {
   color: #e11d48; 
   transform: scale(1.15);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-right: 35px;
 }

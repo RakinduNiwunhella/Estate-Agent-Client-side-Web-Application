@@ -2,7 +2,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <p className="about-tag">ABOUT US</p>
       <h2 className="about-title">Why Choose Premier Properties</h2>
 
