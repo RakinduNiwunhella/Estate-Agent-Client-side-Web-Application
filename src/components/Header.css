@@ -2,7 +2,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-
 }
 
 /* Main nav */
@@ -11,65 +10,75 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 8px 32px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* Logo */
 .logo-section {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .logo {
   background: #10077a;
-  padding: 3px;
+  padding: 4px;
   border-radius: 12px;
-  font-size: 24px;
-  width: 40px;
+  width: 42px;
 }
 
 .logo-section h1 {
   margin: 0;
-  font-size: 23px;
+  font-size: 22px;
   color: #10077a;
 }
 
 .logo-section p {
   margin: 0;
-  font-size: 14px;
-  color: gray;
+  font-size: 13px;
+  color: #6b7280;
 }
 
-/* Nav links */
-.nav-links a {
-  position: relative;
-  text-decoration: none;
-  color: #374151;
+/* Nav container */
+.nav-links {
   display: flex;
   align-items: center;
+  gap: 36px;
+  margin-right: 32px;
 }
 
-.nav-links a::after {
+/* Nav buttons */
+.nav-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Underline hover animation */
+.nav-links button::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -4px;
   width: 0;
   height: 2px;
   background-color: #10077a;
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links button:hover::after {
   width: 100%;
-  color: #10077a;
 }
 
-.nav-links a:hover{
-    color: #10077a;
- }
+.nav-links button:hover {
+  color: #10077a;
+}
 
 /* Favourite button */
 .fav-btn {
@@ -78,25 +87,17 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding-bottom: 6px;
+  padding: 0;
 }
 
+/* Heart icon */
 .heart-icon {
   font-size: 22px;
   color: #10077a;
-  display: flex;
-  align-items: center;
   transition: color 0.25s ease, transform 0.15s ease;
 }
 
 .fav-btn:hover .heart-icon {
-  color: #e11d48; 
+  color: #e11d48;
   transform: scale(1.15);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin-right: 35px;
 }

@@ -229,7 +229,14 @@ export const Properties = ({
           const isFavourite = favourites.includes(p.id);
 
           return (
-            <div key={p.id} className="property-card">
+            <div
+              key={p.id}
+              className="property-card"
+              draggable
+              onDragStart={(e) =>
+                e.dataTransfer.setData("propertyId", p.id)
+              }
+            >
               <Link to={`/property/${p.id}`}>
                 <div className="image-wrapper">
                   <img src={p.picture} alt={p.type} />
@@ -238,7 +245,7 @@ export const Properties = ({
               </Link>
 
               <button
-                className="fav-btn"
+                className={`fav-btn ${isFavourite ? "active" : ""}`}
                 onClick={() => addToFavourites(p.id)}
               >
                 {isFavourite ? <FaHeart /> : <FaRegHeart />}

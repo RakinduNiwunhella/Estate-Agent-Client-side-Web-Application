@@ -13,6 +13,7 @@ function Favourite({
 
   return (
     <div
+      id="favourites"
       className="favourites-list"
       onDragOver={(e) => e.preventDefault()}
       onDrop={(e) => {
