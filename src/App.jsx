@@ -6,6 +6,7 @@ import HeroSection from "./components/HeroSection";
 import { Properties } from "./components/Properties";
 import About from "./components/About";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import PropertyDetails from "./components/PropertyDetails";
 import Favourite from "./components/Favourites";
@@ -55,6 +56,7 @@ function Home({ favourites, addToFavourites, removeFromFavourites, clearFavourit
 
       <About />
       <Services />
+      <Contact/>
     </>
   );
 }
@@ -96,19 +98,9 @@ function App() {
         />
 
         <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
 
-        <Route
-          path="/favourites"
-          element={
-            <Favourite
-              favourites={favourites}
-              properties={data.properties}
-              addToFavourites={addToFavourites}
-              removeFromFavourites={removeFromFavourites}
-              clearFavourites={clearFavourites}
-            />
-          }
-        />
+       
 
         <Route
           path="/property/:id"

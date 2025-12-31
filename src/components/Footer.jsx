@@ -20,10 +20,22 @@ const Footer = () => {
         {/* Links */}
         <div className="footer-links">
           <h4>Explore</h4>
-          <a href="#">About Us</a>
-          <a href="#">Properties</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+
+          <button onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}>
+            About Us
+          </button>
+
+          <button onClick={() => document.getElementById("properties")?.scrollIntoView({ behavior: "smooth" })}>
+            Properties
+          </button>
+
+          <button onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}>
+            Services
+          </button>
+
+          <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+            Contact
+          </button>
         </div>
 
         {/* Contact */}
