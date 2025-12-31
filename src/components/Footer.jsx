@@ -49,7 +49,7 @@ const Footer = () => {
 
           <div className="contact-item">
             <span className="material-symbols-outlined">call</span>
-            <p>+94 070 225 2257</p>
+            <p>+44 12 3456 7890</p>
           </div>
 
           <div className="contact-item">

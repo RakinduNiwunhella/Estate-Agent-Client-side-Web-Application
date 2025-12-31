@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="about" id="about">
       <p className="about-tag">ABOUT US</p>
-      <h2 className="about-title">Why Choose Premier Properties</h2>
+      <h2 className="about-title">Why Choose Sterling Properties</h2>
 
       <p className="about-desc">
         For over three decades, we've been helping people find their dream

@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <span className="hero-tag">PREMIER PROPERTIES</span>
+        <span className="hero-tag">STERLING PROPERTIES</span>
 
         <h1>Discover Your Perfect Home in London</h1>
 
@@ -18,8 +18,12 @@ const HeroSection = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary">Browse Properties</button>
-          <button className="btn-secondary">Learn More</button>
+          <button className="btn-primary" onClick={() => document.getElementById("properties")?.scrollIntoView({ behavior: "smooth" })}>
+            Browse Properties
+          </button>
+          <button className="btn-secondary" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}>
+            Learn More
+          </button>
         </div>
       </div>
 

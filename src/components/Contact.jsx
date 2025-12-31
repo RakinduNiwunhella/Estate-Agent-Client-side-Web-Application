@@ -15,8 +15,8 @@ const Contact = () => {
           <p><strong>Estate Agent UK Ltd</strong></p>
           <p>45 High Street</p>
           <p>London, SW1A 1AA</p>
-          <p>Email: enquiries@estateagentuk.co.uk</p>
-          <p>Phone: +44 20 7946 0123</p>
+          <p>Email: sterlingproperties@gmail.com</p>
+          <p>Phone: +44 12 3456 7890</p>
         </div>
 
         <form className="contact-form">
