@@ -97,7 +97,7 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
         </div>
 {/* PROPERTY TABS */}
 <div className="property-tabs">
-  <Tabs>
+  <Tabs >
 
     <TabList>
       <Tab>Description</Tab>
