@@ -64,9 +64,11 @@ function Favourite({
               key={property.id}
               className="favourite-item"
               draggable
-              onDragStart={(e) =>
-                e.dataTransfer.setData("propertyId", property.id)
-              }
+              onDragStart={(e) => {
+                e.dataTransfer.setData("propertyId", property.id);
+                e.dataTransfer.effectAllowed = "move";
+              }}
+              onDragEnd={() => removeFromFavourites(property.id)}
             >
               <Link
                 to={`/property/${property.id}`}

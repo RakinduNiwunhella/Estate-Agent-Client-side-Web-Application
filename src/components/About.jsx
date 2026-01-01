@@ -1,9 +1,10 @@
+import { FaAward, FaUsers, FaChartLine, FaShieldAlt } from "react-icons/fa";
 import "./About.css";
 
 const About = () => {
   return (
     <section className="about" id="about">
-      <p className="about-tag">ABOUT US</p>
+      <h1 className="about-tag">ABOUT US</h1>
       <h2 className="about-title">Why Choose Sterling Properties</h2>
 
       <p className="about-desc">
@@ -15,9 +16,7 @@ const About = () => {
       <div className="about-cards">
         <div className="about-card">
           <div className="icon-circle">
-
-                                                          <span className="material-symbols-outlined">military_tech</span>
-
+            <FaAward />
           </div>
           <h4>Award Winning</h4>
           <p>
@@ -28,8 +27,7 @@ const About = () => {
 
         <div className="about-card">
           <div className="icon-circle">
-                                              <span className="material-symbols-outlined">group</span>
-
+            <FaUsers />
           </div>
           <h4>Expert Team</h4>
           <p>
@@ -40,8 +38,7 @@ const About = () => {
 
         <div className="about-card">
           <div className="icon-circle">
-                                  <span className="material-symbols-outlined">trending_up</span>
-
+            <FaChartLine />
           </div>
           <h4>Market Leaders</h4>
           <p>
@@ -52,8 +49,7 @@ const About = () => {
 
         <div className="about-card">
           <div className="icon-circle">
-                      <span className="material-symbols-outlined">shield</span>
-
+            <FaShieldAlt />
           </div>
           <h4>Trusted Service</h4>
           <p>

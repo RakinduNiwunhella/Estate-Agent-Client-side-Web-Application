@@ -65,7 +65,7 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #10077a;
 }
 
 /* Button */
@@ -74,7 +74,7 @@
   padding: 12px;
   border: none;
   border-radius: 6px;
-  background-color: #2563eb;
+  background-color: #10077a;
   color: white;
   font-size: 15px;
   cursor: pointer;

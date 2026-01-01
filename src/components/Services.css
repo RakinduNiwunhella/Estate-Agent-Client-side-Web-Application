@@ -12,9 +12,9 @@
 }
 
 .services-hero h1 {
-  font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 12px;
+  color: #10077a;
 }
 
 .services-hero p {
@@ -50,7 +50,7 @@
 /* Icon */
 .service-icon {
   font-size: 2.3rem;
-  color: #2563eb; /* adjust to match your theme */
+  color: #10077a; /* adjust to match your theme */
   margin-bottom: 16px;
 }
 

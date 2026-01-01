@@ -5,15 +5,14 @@
 }
 
 .about-tag {
-  color: #4f46e5;
-  font-size: 14px;
+  color: #10077a;
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 12px;
 }
 
 .about-title {
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -48,9 +47,9 @@
   margin: 0 auto 25px;
 }
 
-.icon-circle span {
-  font-size: 36px;
-  color: #4f46e5;
+.icon-circle svg {
+  font-size: 28px;
+  color: #10077a;
 }
 
 .about-card h4 {

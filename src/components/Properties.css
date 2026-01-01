@@ -23,7 +23,7 @@
 }
 
 .results span {
-  color: #4f46e5;
+  color: #10077a;
   font-weight: 600;
 }
 
@@ -43,6 +43,27 @@
   align-items: center;
 }
 
+/* RESET BUTTON (MUI) */
+.filter-field .MuiButton-outlined {
+  height: 44px;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.filter-field .MuiButton-outlined:hover {
+  border-color: #dc2626;
+  background-color: rgba(239, 68, 68, 0.08);
+}
+
+.filter-field .MuiInputBase-root {
+  height: 44px;
+}
+
+.filter-field .MuiInputBase-input {
+  padding-left: 38px;
+  font-size: 14px;
+}
+
 /* Icons for normal inputs */
 .filter-icon {
   position: absolute;
@@ -59,65 +80,13 @@
   justify-content: center;
 }
 
-/* Inputs & selects */
-.filter-field input,
-.filter-field select {
-  width: 100%;
+.mui-date .MuiInputBase-root {
   height: 44px;
-  padding: 0 14px 0 38px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-  background: #ffffff;
-  color: #111827;
 }
 
-/* Select arrow */
-.filter-field select {
-  padding-right: 34px;
-  appearance: none;
-  background-image:
-    linear-gradient(45deg, transparent 50%, #6b7280 50%),
-    linear-gradient(135deg, #6b7280 50%, transparent 50%);
-  background-position:
-    right 14px center,
-    right 8px center;
-  background-size: 6px 6px;
-  background-repeat: no-repeat;
+.filter-field .filter-icon {
+  z-index: 2;
 }
-
-/* Focus state */
-.filter-field input:focus,
-.filter-field select:focus {
-  outline: none;
-  border-color: #4f46e5;
-}
-
-/* RESET BUTTON */
-.reset-btn {
-  width: 100%;
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  background: #f9fafb;
-  font-size: 14px;
-  font-weight: 500;
-  color: #374151;
-  cursor: pointer;
-}
-
-.reset-btn:hover {
-  background: #f3f4f6;
-}
-
-.reset-btn:focus {
-  outline: none;
-  border-color: #4f46e5;
-}
-
-
-
-
 
 /* PROPERTY GRID */
 .property-grid {
@@ -160,7 +129,7 @@
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
-  color: #4f46e5;
+  color: #10077a;
 }
 
 .fav-btn {
@@ -197,6 +166,13 @@
   margin-bottom: 8px;
 }
 
+.card-desc {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
 .location {
   font-size: 14px;
   color: #6b7280;
@@ -207,7 +183,7 @@
   display: flex;
   gap: 12px;
   font-size: 14px;
-  color: #4f46e5;
+  color: #10077a;
   margin-bottom: 14px;
 }
 
@@ -221,7 +197,7 @@
 
 .details {
   font-size: 14px;
-  color: #4f46e5;
+  color: #10077a;
   text-decoration: none;
 }
 
@@ -230,7 +206,4 @@
   .properties-wrapper {
     padding: 20px;
   }
-}
-.filter-field .filter-icon {
-  z-index: 2;
 }

@@ -18,6 +18,7 @@ import Favourite from "./Favourites";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { TextField, Select, MenuItem, Button } from "@mui/material";
 
 export const Properties = ({
   favourites,
@@ -90,65 +91,75 @@ export const Properties = ({
           {/* TYPE */}
           <div className="filter-field">
             <span className="filter-icon"><FaHome /></span>
-            <select
+            <Select
+              size="small"
+              fullWidth
               value={filters.type}
               onChange={(e) =>
                 setFilters({ ...filters, type: e.target.value })
               }
             >
-              <option value="Any">Any Type</option>
-              <option value="House">House</option>
-              <option value="Flat">Flat</option>
-            </select>
+              <MenuItem value="Any">Any Type</MenuItem>
+              <MenuItem value="House">House</MenuItem>
+              <MenuItem value="Flat">Flat</MenuItem>
+            </Select>
           </div>
 
           {/* PRICE */}
           <div className="filter-field">
             <span className="filter-icon"><FaPoundSign /></span>
-            <input
+            <TextField
               type="number"
+              size="small"
               placeholder="Min Price"
               value={filters.minPrice}
               onChange={(e) =>
                 setFilters({ ...filters, minPrice: e.target.value })
               }
+              fullWidth
             />
           </div>
 
           <div className="filter-field">
             <span className="filter-icon"><FaPoundSign /></span>
-            <input
+            <TextField
               type="number"
+              size="small"
               placeholder="Max Price"
               value={filters.maxPrice}
               onChange={(e) =>
                 setFilters({ ...filters, maxPrice: e.target.value })
               }
+              fullWidth
             />
           </div>
 
           {/* BEDS */}
           <div className="filter-field">
             <span className="filter-icon"><FaBed /></span>
-            <input
+            <TextField
               type="number"
+              size="small"
               placeholder="Min Beds"
               value={filters.minBeds}
               onChange={(e) =>
                 setFilters({ ...filters, minBeds: e.target.value })
               }
+              fullWidth
             />
           </div>
 
           <div className="filter-field">
             <span className="filter-icon"><FaBed /></span>
-            <input
+            <TextField
               type="number"
+              size="small"
               placeholder="Max Beds"
               value={filters.maxBeds}
               onChange={(e) =>
                 setFilters({ ...filters, maxBeds: e.target.value })
               }
+              fullWidth
             />
           </div>
 
@@ -192,21 +203,28 @@ export const Properties = ({
           {/* POSTCODE */}
           <div className="filter-field">
             <span className="filter-icon"><FaMapMarkerAlt /></span>
-            <input
+            <TextField
               type="text"
+              size="small"
               placeholder="Postcode"
               value={filters.postcode}
               onChange={(e) =>
                 setFilters({ ...filters, postcode: e.target.value })
               }
+              fullWidth
             />
           </div>
 
           {/* RESET */}
           <div className="filter-field">
-            <button className="reset-btn" onClick={resetFilters}>
+            <Button
+              variant="outlined"
+              size="small"
+              fullWidth
+              onClick={resetFilters}
+            >
               Reset
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -253,6 +271,11 @@ export const Properties = ({
 
               <div className="card-body">
                 <h3>{p.type} • {p.bedrooms} Beds</h3>
+
+                <p className="card-desc">
+                  {p.description.replace(/<br>/g, "").slice(0, 90)}...
+                </p>
+
                 <p className="location">
                   <FaMapMarkerAlt /> {p.location}
                 </p>
