@@ -222,6 +222,8 @@
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid #e5e7eb;
+    white-space: pre-line;  
+/* the last one is to enable \n as line breaks */
 }
 
 .property-description h2 {

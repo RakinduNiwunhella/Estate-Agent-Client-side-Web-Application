@@ -103,11 +103,8 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
             {/* DESCRIPTION TAB */}
             <TabPanel>
               <div className="property-description">
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: property.description,
-                  }}
-                />
+                {property.description.replace(/<br>/g, "\n")}
+
               </div>
             </TabPanel>
 
