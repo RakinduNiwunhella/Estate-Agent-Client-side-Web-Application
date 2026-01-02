@@ -109,11 +109,11 @@
 },
 {
   "id": "prop5",
-  "type": "Bungalow",
+  "type": "House",
   "bedrooms": 2,
   "price": 510000,
   "tenure": "Freehold",
-  "description": "Well-maintained two bedroom bungalow set within a quiet residential street, offering convenient single-level living and excellent outdoor space.<br>The property features a spacious living room, a modern fitted kitchen with ample storage, and two comfortable bedrooms suited for a range of buyers. The accommodation is thoughtfully laid out to maximise space and practicality.<br>Externally, the bungalow benefits from both front and rear gardens, providing ideal areas for relaxation and gardening. Additional features include off-street parking, double glazing, gas central heating, and close proximity to local shops, transport routes, and amenities.",
+  "description": "Well-maintained two bedroom House set within a quiet residential street, offering convenient single-level living and excellent outdoor space.<br>The property features a spacious living room, a modern fitted kitchen with ample storage, and two comfortable bedrooms suited for a range of buyers. The accommodation is thoughtfully laid out to maximise space and practicality.<br>Externally, the home benefits from both front and rear gardens, providing ideal areas for relaxation and gardening. Additional features include off-street parking, double glazing, gas central heating, and close proximity to local shops, transport routes, and amenities.",
   "location": "Oakwood Avenue, Sidcup DA15",
   "picture": "/images/properties/property5/property5-1.webp",
   "url": "properties/prop5.html",

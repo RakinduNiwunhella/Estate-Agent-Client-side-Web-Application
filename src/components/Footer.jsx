@@ -1,3 +1,4 @@
+import { FaHome, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
         {/* Brand */}
         <div className="footer-brand">
           <div className="brand">
-            <span className="material-symbols-outlined">home</span>
+            <FaHome />
             <h3>Sterling Properties </h3>
           </div>
           <p>
@@ -43,17 +44,17 @@ const Footer = () => {
           <h4>Get in Touch</h4>
 
           <div className="contact-item">
-            <span className="material-symbols-outlined">mail</span>
+            <FaEnvelope />
             <p>sterlingproperties@gmail.com</p>
           </div>
 
           <div className="contact-item">
-            <span className="material-symbols-outlined">call</span>
+            <FaPhoneAlt />
             <p>+44 12 3456 7890</p>
           </div>
 
           <div className="contact-item">
-            <span className="material-symbols-outlined">location_on</span>
+            <FaMapMarkerAlt />
             <p>London, UK</p>
           </div>
         </div>

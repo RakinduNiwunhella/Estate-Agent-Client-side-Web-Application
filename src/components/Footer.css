@@ -31,7 +31,7 @@
   gap: 12px;
 }
 
-.brand span {
+.brand svg {
   background: #4f46e5;
   padding: 10px;
   border-radius: 12px;
@@ -106,7 +106,7 @@
   margin-bottom: 14px;
 }
 
-.contact-item span {
+.contact-item svg {
   font-size: 20px;
   color: #a5b4fc;
 }

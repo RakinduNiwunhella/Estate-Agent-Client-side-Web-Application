@@ -161,9 +161,31 @@
   padding: 18px;
 }
 
-.card-body h3 {
+
+.property-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 16px;
+  font-weight: 600;
+  color: #111827;
   margin-bottom: 8px;
+}
+
+.bed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.bed-badge svg {
+  font-size: 14px;
 }
 
 .card-desc {

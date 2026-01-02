@@ -270,7 +270,12 @@ export const Properties = ({
               </button>
 
               <div className="card-body">
-                <h3>{p.type} • {p.bedrooms} Beds</h3>
+                <h3 className="property-title">
+                  {p.type}
+                  <span className="bed-badge">
+                    <FaBed /> {p.bedrooms}
+                  </span>
+                </h3>
 
                 <p className="card-desc">
                   {p.description.replace(/<br>/g, "").slice(0, 90)}...
