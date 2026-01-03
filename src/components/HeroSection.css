@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  background-image: url("src/assets/HeroImage.webp");
   background-size: cover;
   background-position: center;
   color: white;

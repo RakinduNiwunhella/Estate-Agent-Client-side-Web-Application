@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaHeart, FaBars } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from "../assets/Logo.webp";
 import "./Header.css";
 
 const Header = () => {
@@ -23,7 +24,7 @@ const Header = () => {
         <div className="logo-section">
           <img
             className="logo"
-            src="src/assets/Logo.webp"
+            src={logo}
             alt="Sterling Properties logo"
           />
           <div>
