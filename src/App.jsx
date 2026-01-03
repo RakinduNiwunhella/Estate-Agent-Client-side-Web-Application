@@ -30,18 +30,9 @@ function PropertyDetailsWrapper({ favourites, addToFavourites, removeFromFavouri
   );
 }
 
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+
 
 function Home({ favourites, addToFavourites, removeFromFavourites, clearFavourites }) {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.state?.scrollTo) {
-      const el = document.getElementById(location.state.scrollTo);
-      el?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
 
   return (
     <>

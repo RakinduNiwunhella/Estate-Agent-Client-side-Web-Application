@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./PropertyDetails.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+
 
 function PropertyDetails({
   property,
@@ -10,6 +11,11 @@ function PropertyDetails({
   addToFavourites,
   removeFromFavourites,
 }) {
+  useEffect(() => {
+    const el = document.getElementById("property-title");
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, []);
+
   const allImages = [property.picture, ...property.images];
   const [current, setCurrent] = useState(0);
 
@@ -27,7 +33,7 @@ function PropertyDetails({
     <div className="property-details-wrapper">
       {/* property title and location */}
       <div className="property-header-top">
-        <h1 className="property-title">
+        <h1 id="property-title" className="property-title">
           {property.type} with {property.bedrooms} Bedrooms
         </h1>
 
