@@ -89,5 +89,29 @@
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .contact-form label {
+    align-items: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-page h1,
+  .contact-subtitle {
+    text-align: center;
   }
 }

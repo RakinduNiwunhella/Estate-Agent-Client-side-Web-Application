@@ -44,17 +44,20 @@ const renderComponent = (favourites = []) => {
 };
 
 describe("Favourites component", () => {
+  //Test 01
   it("shows empty state when there are no favourites", () => {
     renderComponent([]);
     expect(screen.getByText(/no favourites yet/i)).toBeInTheDocument();
   });
 
+  //Test 02
   it("displays favourite properties when favourites exist", () => {
     renderComponent(["p1"]);
     expect(screen.getByText(/house/i)).toBeInTheDocument();
     expect(screen.getByText(/£450,000/i)).toBeInTheDocument();
   });
 
+  //Test 03
   it("removes a favourite when Remove button is clicked", async () => {
     const user = userEvent.setup();
     const { removeFromFavourites } = renderComponent(["p1"]);
@@ -63,6 +66,7 @@ describe("Favourites component", () => {
     expect(removeFromFavourites).toHaveBeenCalledWith("p1");
   });
 
+  //Test 04
   it("clears all favourites when Clear all favourites is clicked", async () => {
     const user = userEvent.setup();
     const { clearFavourites } = renderComponent(["p1", "p2"]);

@@ -167,14 +167,14 @@ export const Properties = ({
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <div className="filter-field mui-date">
               <DatePicker
-  views={["year", "month", "day"]}
+  format="DD/MM/YYYY"
   value={filters.dateFrom}
   onChange={(newValue) =>
     setFilters({ ...filters, dateFrom: newValue })
   }
   slotProps={{
     textField: {
-      placeholder: "Added from",
+      label: "Added from",
       size: "small",
       fullWidth: true
     }
@@ -184,14 +184,14 @@ export const Properties = ({
 
             <div className="filter-field mui-date">
              <DatePicker
-  views={["year", "month", "day"]}
+  format="DD/MM/YYYY"
   value={filters.dateTo}
   onChange={(newValue) =>
     setFilters({ ...filters, dateTo: newValue })
   }
   slotProps={{
     textField: {
-      placeholder: "Added to",
+      label: "Added to",
       size: "small",
       fullWidth: true
     }

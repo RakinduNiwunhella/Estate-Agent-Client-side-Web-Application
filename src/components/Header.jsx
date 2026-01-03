@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
@@ -6,6 +6,7 @@ import "./Header.css";
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const goToSection = (id) => {
     if (location.pathname !== "/") {
@@ -31,17 +32,25 @@ const Header = () => {
           </div>
         </div>
 
-        <nav className="nav-links">
-          <button onClick={() => goToSection("properties")}>
+        <button
+          className="hamburger"
+          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
+          <button onClick={() => { goToSection("properties"); setMenuOpen(false); }}>
             Search Properties
           </button>
-          <button onClick={() => goToSection("about")}>
+          <button onClick={() => { goToSection("about"); setMenuOpen(false); }}>
             About Us
           </button>
-          <button onClick={() => goToSection("services")}>
+          <button onClick={() => { goToSection("services"); setMenuOpen(false); }}>
             Our Services
           </button>
-          <button onClick={() => goToSection("contact")}>
+          <button onClick={() => { goToSection("contact"); setMenuOpen(false); }}>
             Contact
           </button>
           </nav>

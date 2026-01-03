@@ -80,8 +80,18 @@
   justify-content: center;
 }
 
+/* DatePicker input height */
 .mui-date .MuiInputBase-root {
   height: 44px;
+}
+
+/* MUI DatePicker label colour */
+.mui-date .MuiInputLabel-root {
+  color: #6b7280;
+}
+
+.mui-date .MuiInputLabel-root.Mui-focused {
+  color: #6b7280;
 }
 
 .filter-field .filter-icon {
