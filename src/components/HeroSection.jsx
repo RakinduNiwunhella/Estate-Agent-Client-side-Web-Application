@@ -1,11 +1,13 @@
 import React from "react";
 import "./HeroSection.css";
-import heroBg from "../assets/hero.webp";
+import heroBg from "../assets/HeroImage.webp";
 
 const HeroSection = () => {
   return (
-    <section className="hero">
-      style={{ backgroundImage: `url(${heroBg})` }} 
+    <section
+      className="hero"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <div className="hero-overlay" />
 
       <div className="hero-content">
