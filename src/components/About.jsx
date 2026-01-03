@@ -8,9 +8,9 @@ const About = () => {
       <h2 className="about-title">Why Choose Sterling Properties</h2>
 
       <p className="about-desc">
-        For over three decades, we've been helping people find their dream
-        homes across London. Our commitment to excellence and personalized
-        service sets us apart.
+        For over three decades, we've been helping people find their dream homes
+        across London. Our commitment to excellence and personalized service
+        sets us apart.
       </p>
 
       <div className="about-cards">
@@ -20,8 +20,8 @@ const About = () => {
           </div>
           <h4>Award Winning</h4>
           <p>
-            Recognized as London's leading estate agency with multiple
-            industry awards.
+            Recognized as London's leading estate agency with multiple industry
+            awards.
           </p>
         </div>
 
@@ -31,8 +31,8 @@ const About = () => {
           </div>
           <h4>Expert Team</h4>
           <p>
-            Our dedicated professionals bring decades of combined real
-            estate expertise.
+            Our dedicated professionals bring decades of combined real estate
+            expertise.
           </p>
         </div>
 
@@ -53,8 +53,8 @@ const About = () => {
           </div>
           <h4>Trusted Service</h4>
           <p>
-            Transparent processes and honest advice you can rely on every
-            step of the way.
+            Transparent processes and honest advice you can rely on every step
+            of the way.
           </p>
         </div>
       </div>

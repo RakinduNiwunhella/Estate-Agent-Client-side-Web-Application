@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaBars } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
 
@@ -37,31 +37,50 @@ const Header = () => {
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          <FaBars />
         </button>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <button onClick={() => { goToSection("properties"); setMenuOpen(false); }}>
+          <button
+            onClick={() => {
+              goToSection("properties");
+              setMenuOpen(false);
+            }}
+          >
             Search Properties
           </button>
-          <button onClick={() => { goToSection("about"); setMenuOpen(false); }}>
+          <button
+            onClick={() => {
+              goToSection("about");
+              setMenuOpen(false);
+            }}
+          >
             About Us
           </button>
-          <button onClick={() => { goToSection("services"); setMenuOpen(false); }}>
+          <button
+            onClick={() => {
+              goToSection("services");
+              setMenuOpen(false);
+            }}
+          >
             Our Services
           </button>
-          <button onClick={() => { goToSection("contact"); setMenuOpen(false); }}>
+          <button
+            onClick={() => {
+              goToSection("contact");
+              setMenuOpen(false);
+            }}
+          >
             Contact
           </button>
-          </nav>
-          <button
-            className="fav-btn"
-            title="View favourites"
-            onClick={() => goToSection("favourites")}
-          >
-            <FaHeart className="heart-icon" />
-          </button>
-        
+        </nav>
+        <button
+          className="fav-btn"
+          title="View favourites"
+          onClick={() => goToSection("favourites")}
+        >
+          <FaHeart className="heart-icon" />
+        </button>
       </div>
     </header>
   );

@@ -50,7 +50,8 @@
 /* Icon */
 .service-icon {
   font-size: 2.3rem;
-  color: #10077a; /* adjust to match your theme */
+  color: #10077a;
+  /* adjust to match your theme */
   margin-bottom: 16px;
 }
 

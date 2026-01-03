@@ -4,7 +4,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
-function PropertyDetails({ property, favourites, addToFavourites, removeFromFavourites }) {
+function PropertyDetails({
+  property,
+  favourites,
+  addToFavourites,
+  removeFromFavourites,
+}) {
   const allImages = [property.picture, ...property.images];
   const [current, setCurrent] = useState(0);
 
@@ -20,7 +25,7 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
 
   return (
     <div className="property-details-wrapper">
-      {/* PROPERTY TITLE & LOCATION */}
+      {/* property title and location */}
       <div className="property-header-top">
         <h1 className="property-title">
           {property.type} with {property.bedrooms} Bedrooms
@@ -41,7 +46,7 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
 
       <p className="property-location">{property.location}</p>
 
-      {/* IMAGE GALLERY */}
+      {/* images */}
       <div className="gallery">
         <div className="main-image">
           <img src={allImages[current]} alt="Property" draggable={false} />
@@ -66,14 +71,13 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
         </div>
       </div>
 
-      {/* PROPERTY HEADER */}
+      {/* property details */}
       <div className="property-header">
-        <div className="property-price">
-          £{property.price.toLocaleString()}
-        </div>
+        <div className="property-price">£{property.price.toLocaleString()}</div>
 
         <p className="property-added">
-          Added on {property.added.day}/{property.added.month}/{property.added.year}
+          Added on {property.added.day}/{property.added.month}/
+          {property.added.year}
         </p>
 
         <div className="property-features">
@@ -87,11 +91,11 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
           </div>
           <div>
             <span className="label">Tenure</span>
-            <span className="link">{property.tenure}</span>
+            <span>{property.tenure}</span>
           </div>
         </div>
 
-        {/* PROPERTY TABS */}
+        {/* property tabs */}
         <div className="property-tabs">
           <Tabs>
             <TabList>
@@ -100,22 +104,21 @@ function PropertyDetails({ property, favourites, addToFavourites, removeFromFavo
               <Tab>Map</Tab>
             </TabList>
 
-            {/* DESCRIPTION TAB */}
+            {/* description tab */}
             <TabPanel>
               <div className="property-description">
                 {property.description.replace(/<br>/g, "\n")}
-
               </div>
             </TabPanel>
 
-            {/* FLOOR PLAN TAB */}
+            {/* floor plan tab */}
             <TabPanel>
               <div className="property-floorplan">
                 <img src={property.floorPlan} alt="Property floor plan" />
               </div>
             </TabPanel>
 
-            {/* MAP TAB */}
+            {/* map tab*/}
             <TabPanel>
               <div className="property-map">
                 <iframe

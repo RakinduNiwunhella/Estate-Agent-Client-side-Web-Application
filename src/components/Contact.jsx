@@ -6,13 +6,16 @@ const Contact = () => {
     <div className="contact-page" id="contact">
       <h1>Contact Us</h1>
       <p className="contact-subtitle">
-        Have a question about a property or need assistance? Get in touch with us.
+        Have a question about a property or need assistance? Get in touch with
+        us.
       </p>
 
       <div className="contact-container">
         <div className="contact-info">
           <h2>Our Office</h2>
-          <p><strong>Estate Agent UK Ltd</strong></p>
+          <p>
+            <strong>Estate Agent UK Ltd</strong>
+          </p>
           <p>45 High Street</p>
           <p>London, SW1A 1AA</p>
           <p>Email: sterlingproperties@gmail.com</p>

@@ -45,7 +45,7 @@ function Services() {
           <FaCamera className="service-icon" />
           <h3>Image Galleries</h3>
           <p>
-            Browse 6–8 images per property with a smooth and intuitive gallery
+            Browse 6-8 images per property with a smooth and intuitive gallery
             experience.
           </p>
         </div>
@@ -81,8 +81,8 @@ function Services() {
           <FaListAlt className="service-icon" />
           <h3>Property Results Display</h3>
           <p>
-            Search results are presented in a clean, structured layout with images,
-            prices, and short descriptions for easy comparison.
+            Search results are presented in a clean, structured layout with
+            images, prices, and short descriptions for easy comparison.
           </p>
         </div>
 
@@ -90,8 +90,8 @@ function Services() {
           <FaShieldAlt className="service-icon" />
           <h3>Client-Side Security</h3>
           <p>
-            Protection against client-side attacks using CSP, safe JSX rendering,
-            and secure handling of user input.
+            Protection against client-side attacks using CSP, safe JSX
+            rendering, and secure handling of user input.
           </p>
         </div>
       </section>

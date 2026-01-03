@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 
-/* PAGE WRAPPER */
+/* page wrapper */
 .properties-wrapper {
   padding: 32px;
   background: #f6f7fb;
 }
 
-/* TOP CARD */
+/* top card */
 .search-card {
   background: #ffffff;
   border-radius: 20px;
@@ -27,7 +27,7 @@
   font-weight: 600;
 }
 
-/* FILTER BAR */
+/* filter bar */
 .filters-row {
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@
   align-items: center;
 }
 
-/* RESET BUTTON (MUI) */
+/* reset button */
 .filter-field .MuiButton-outlined {
   height: 44px;
   border-color: #ef4444;
@@ -80,32 +80,28 @@
   justify-content: center;
 }
 
-/* DatePicker input height */
-.mui-date .MuiInputBase-root {
-  height: 44px;
-}
 
-/* MUI DatePicker label colour */
+
 .mui-date .MuiInputLabel-root {
   color: #6b7280;
+  font-size: 14px;
+
+
 }
 
-.mui-date .MuiInputLabel-root.Mui-focused {
-  color: #6b7280;
-}
 
 .filter-field .filter-icon {
   z-index: 2;
 }
 
-/* PROPERTY GRID */
+/* property grid */
 .property-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 28px;
 }
 
-/* PROPERTY CARD */
+/* property card */
 .property-card {
   position: relative;
   background: #ffffff;
@@ -158,13 +154,15 @@
   justify-content: center;
   padding: 0;
 }
+
 .fav-btn svg {
   display: block;
   font-size: 20px;
 }
+
 /* Heart colour when active */
 .fav-btn.active svg {
-  color: #ef4444; 
+  color: #ef4444;
 }
 
 .card-body {
@@ -233,7 +231,7 @@
   text-decoration: none;
 }
 
-/* MOBILE */
+/* mobile */
 @media (max-width: 768px) {
   .properties-wrapper {
     padding: 20px;

@@ -9,7 +9,7 @@ import {
   FaBed,
   FaMapMarkerAlt,
   FaHeart,
-  FaRegHeart
+  FaRegHeart,
 } from "react-icons/fa";
 
 import Favourite from "./Favourites";
@@ -36,7 +36,7 @@ export const Properties = ({
     maxBeds: "",
     dateFrom: null,
     dateTo: null,
-    postcode: ""
+    postcode: "",
   });
 
   const resetFilters = () => {
@@ -48,7 +48,7 @@ export const Properties = ({
       maxBeds: "",
       dateFrom: null,
       dateTo: null,
-      postcode: ""
+      postcode: "",
     });
   };
 
@@ -62,11 +62,7 @@ export const Properties = ({
     // DATE FILTER
     if (filters.dateFrom || filters.dateTo) {
       const monthIndex = new Date(`${p.added.month} 1, 2000`).getMonth();
-      const propertyDate = new Date(
-        p.added.year,
-        monthIndex,
-        p.added.day
-      );
+      const propertyDate = new Date(p.added.year, monthIndex, p.added.day);
 
       if (filters.dateFrom && propertyDate < filters.dateFrom.toDate())
         return false;
@@ -87,17 +83,16 @@ export const Properties = ({
     <div className="properties-wrapper" id="properties">
       <div className="search-card">
         <div className="filters-row">
-
           {/* TYPE */}
           <div className="filter-field">
-            <span className="filter-icon"><FaHome /></span>
+            <span className="filter-icon">
+              <FaHome />
+            </span>
             <Select
               size="small"
               fullWidth
               value={filters.type}
-              onChange={(e) =>
-                setFilters({ ...filters, type: e.target.value })
-              }
+              onChange={(e) => setFilters({ ...filters, type: e.target.value })}
             >
               <MenuItem value="Any">Any Type</MenuItem>
               <MenuItem value="House">House</MenuItem>
@@ -107,7 +102,9 @@ export const Properties = ({
 
           {/* PRICE */}
           <div className="filter-field">
-            <span className="filter-icon"><FaPoundSign /></span>
+            <span className="filter-icon">
+              <FaPoundSign />
+            </span>
             <TextField
               type="number"
               size="small"
@@ -121,7 +118,9 @@ export const Properties = ({
           </div>
 
           <div className="filter-field">
-            <span className="filter-icon"><FaPoundSign /></span>
+            <span className="filter-icon">
+              <FaPoundSign />
+            </span>
             <TextField
               type="number"
               size="small"
@@ -136,7 +135,9 @@ export const Properties = ({
 
           {/* BEDS */}
           <div className="filter-field">
-            <span className="filter-icon"><FaBed /></span>
+            <span className="filter-icon">
+              <FaBed />
+            </span>
             <TextField
               type="number"
               size="small"
@@ -150,7 +151,9 @@ export const Properties = ({
           </div>
 
           <div className="filter-field">
-            <span className="filter-icon"><FaBed /></span>
+            <span className="filter-icon">
+              <FaBed />
+            </span>
             <TextField
               type="number"
               size="small"
@@ -167,42 +170,44 @@ export const Properties = ({
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <div className="filter-field mui-date">
               <DatePicker
-  format="DD/MM/YYYY"
-  value={filters.dateFrom}
-  onChange={(newValue) =>
-    setFilters({ ...filters, dateFrom: newValue })
-  }
-  slotProps={{
-    textField: {
-      label: "Added from",
-      size: "small",
-      fullWidth: true
-    }
-  }}
-/>
+                format="DD/MM/YYYY"
+                value={filters.dateFrom}
+                onChange={(newValue) =>
+                  setFilters({ ...filters, dateFrom: newValue })
+                }
+                slotProps={{
+                  textField: {
+                    label: "Added from",
+                    size: "small",
+                    fullWidth: true,
+                  },
+                }}
+              />
             </div>
 
             <div className="filter-field mui-date">
-             <DatePicker
-  format="DD/MM/YYYY"
-  value={filters.dateTo}
-  onChange={(newValue) =>
-    setFilters({ ...filters, dateTo: newValue })
-  }
-  slotProps={{
-    textField: {
-      label: "Added to",
-      size: "small",
-      fullWidth: true
-    }
-  }}
-/>
+              <DatePicker
+                format="DD/MM/YYYY"
+                value={filters.dateTo}
+                onChange={(newValue) =>
+                  setFilters({ ...filters, dateTo: newValue })
+                }
+                slotProps={{
+                  textField: {
+                    label: "Added to",
+                    size: "small",
+                    fullWidth: true,
+                  },
+                }}
+              />
             </div>
           </LocalizationProvider>
 
           {/* POSTCODE */}
           <div className="filter-field">
-            <span className="filter-icon"><FaMapMarkerAlt /></span>
+            <span className="filter-icon">
+              <FaMapMarkerAlt />
+            </span>
             <TextField
               type="text"
               size="small"
@@ -251,9 +256,7 @@ export const Properties = ({
               key={p.id}
               className="property-card"
               draggable
-              onDragStart={(e) =>
-                e.dataTransfer.setData("propertyId", p.id)
-              }
+              onDragStart={(e) => e.dataTransfer.setData("propertyId", p.id)}
             >
               <Link to={`/property/${p.id}`}>
                 <div className="image-wrapper">

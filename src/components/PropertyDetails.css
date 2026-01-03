@@ -1,16 +1,10 @@
-/* ==============
-   LAYOUT WRAPPER
-   ============== */
-
 .property-details-wrapper {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 20px;
 }
 
-/* ==============
-   HEADER SECTION
-   ============== */
+/* header */
 
 .property-header-top {
   display: flex;
@@ -32,14 +26,10 @@
   font-size: 16px;
 }
 
-/* =========
-   PROPERTY FAVOURITE (scoped)
-   ========= */
-
 .property-fav-btn {
   width: 40px;
   height: 40px;
-  border-radius: 999px;          /* circle */
+  border-radius: 999px;
   border: 1px solid #e5e7eb;
   background: #ffffff;
   cursor: pointer;
@@ -64,7 +54,7 @@
   transform: translateY(-1px);
 }
 
-/* Active (saved) state */
+/* Active  state */
 .property-fav-btn.active {
   background-color: #fef2f2;
   border-color: #fecaca;
@@ -74,15 +64,12 @@
   color: #ef4444;
 }
 
-/* Focus state for accessibility */
 .property-fav-btn:focus-visible {
   outline: 2px solid #4f46e5;
   outline-offset: 2px;
 }
 
-/* ================
-   IMAGE GALLERY
-   ================ */
+/* images*/
 
 .gallery {
   max-width: 1000px;
@@ -162,10 +149,6 @@
   border-color: #111827;
 }
 
-/* =========================
-   PROPERTY HEADER SECTION
-   ========================= */
-
 .property-header {
   margin-top: 32px;
   background: #ffffff;
@@ -214,16 +197,14 @@
   cursor: pointer;
 }
 
-/* =============
-   DESCRIPTION
-   ============= */
+/* description*/
 
 .property-description {
   margin-top: 32px;
   padding-top: 24px;
   border-top: 1px solid #e5e7eb;
-    white-space: pre-line;  
-/* the last one is to enable \n as line breaks */
+  white-space: pre-line;
+  /* the last one is to enable \n as line breaks */
 }
 
 .property-description h2 {
@@ -239,9 +220,7 @@
   color: #374151;
 }
 
-/* =========
-   TABS
-   ========= */
+/* tabs*/
 
 .property-tabs {
   margin-top: 40px;
@@ -263,9 +242,7 @@
   font-weight: 600;
 }
 
-/* ============
-   FLOOR PLAN
-   ============ */
+/* floor plan */
 
 .property-floorplan img {
   width: 100%;
@@ -275,9 +252,7 @@
   border-radius: 8px;
 }
 
-/* =======
-   MAP
-   ======= */
+/* map */
 
 .property-map iframe {
   width: 100%;
@@ -286,9 +261,7 @@
   border-radius: 8px;
 }
 
-/* ==========
-   RESPONSIVE
-   ========== */
+/*mobile*/
 
 @media (max-width: 768px) {
   .property-title {

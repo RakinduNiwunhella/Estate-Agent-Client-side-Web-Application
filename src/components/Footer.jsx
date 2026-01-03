@@ -1,3 +1,4 @@
+import Logo from "../assets/Logo.webp";
 import { FaHome, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "./Footer.css";
 
@@ -9,8 +10,8 @@ const Footer = () => {
         {/* Brand */}
         <div className="footer-brand">
           <div className="brand">
-            <FaHome />
-            <h3>Sterling Properties </h3>
+            <img src={Logo} alt="Sterling Properties Logo" className="footer-logo" />
+            <h3>Sterling Properties</h3>
           </div>
           <p>
             Helping you find exceptional properties with trusted advice

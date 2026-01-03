@@ -1,6 +1,4 @@
-/* =========================
-   FAVOURITES PANEL
-========================= */
+/* favourites panel */
 
 .favourites-panel {
   position: sticky;
@@ -61,9 +59,7 @@
   text-align: center;
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
+/* empty state */
 
 .favourites-empty {
   padding: 16px 14px 18px;
@@ -87,9 +83,7 @@
   line-height: 1.5;
 }
 
-/* =========================
-   SCROLL AREA
-========================= */
+
 
 .favourites-scroll {
   max-height: 420px;
@@ -111,9 +105,7 @@
   border-radius: 999px;
 }
 
-/* =========================
-   FAVOURITE CARD
-========================= */
+/* cards */
 
 .favourite-item {
   display: grid;
@@ -145,9 +137,7 @@
   text-decoration: none;
 }
 
-/* =========================
-   THUMBNAIL
-========================= */
+/* image*/
 
 .fav-thumb {
   width: 80px;
@@ -157,9 +147,7 @@
   background: #e5e7eb;
 }
 
-/* =========================
-   DETAILS
-========================= */
+/* details*/
 
 .fav-details {
   display: flex;
@@ -188,9 +176,7 @@
   color: #111827;
 }
 
-/* =========================
-   REMOVE BUTTON
-========================= */
+/* remove button */
 
 .remove-btn {
   background: transparent;
@@ -215,9 +201,7 @@
   outline-offset: 2px;
 }
 
-/* =========================
-   CLEAR BUTTON
-========================= */
+/* clear button */
 
 .clear-favourites {
   width: 100%;
@@ -249,16 +233,8 @@
   outline-offset: 2px;
 }
 
-/* =========================
-   RESPONSIVE (MOBILE)
-========================= */
+/* mobile */
 
-@media (max-width: 1024px) {
-  .favourites-panel {
-    position: static;
-    margin-top: 20px;
-  }
-}
 
 @media (max-width: 768px) {
   .favourites-panel {

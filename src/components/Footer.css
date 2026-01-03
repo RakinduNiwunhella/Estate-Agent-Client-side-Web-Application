@@ -31,17 +31,16 @@
   gap: 12px;
 }
 
-.brand svg {
-  background: #4f46e5;
-  padding: 10px;
-  border-radius: 12px;
-  font-size: 22px;
-  color: white;
-}
-
 .brand h3 {
   font-size: 18px;
   font-weight: 600;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 /* Links */
@@ -58,14 +57,6 @@
   font-weight: 600;
 }
 
-/* If you still have <a> links somewhere, keep these */
-.footer-links a {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #c7d2fe;
-  text-decoration: none;
-}
 
 .footer-links a:hover {
   color: white;
@@ -84,19 +75,8 @@
   transition: color 0.2s ease, transform 0.15s ease;
 }
 
-/* Hover / focus states for better UX */
-.footer-links button:hover,
-.footer-links button:focus-visible {
-  color: #ffffff;
-  outline: none;
-  transform: translateX(2px);
-}
 
-/* Optional: active (pressed) feedback */
-.footer-links button:active {
-  transform: translateX(0);
-  opacity: 0.9;
-}
+
 
 /* Contact */
 .contact-item {
@@ -127,7 +107,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 40px;

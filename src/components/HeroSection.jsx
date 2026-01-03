@@ -18,10 +18,24 @@ const HeroSection = () => {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-primary" onClick={() => document.getElementById("properties")?.scrollIntoView({ behavior: "smooth" })}>
+          <button
+            className="btn-primary"
+            onClick={() =>
+              document
+                .getElementById("properties")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Browse Properties
           </button>
-          <button className="btn-secondary" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}>
+          <button
+            className="btn-secondary"
+            onClick={() =>
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Learn More
           </button>
         </div>
