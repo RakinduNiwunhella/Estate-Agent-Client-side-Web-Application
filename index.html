@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Content Security Policy (CSP) -->
+    <!-- restrict what resources the browser is allowed to load. -->
+    <meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    script-src 'self' https://maps.googleapis.com https://www.google.com; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' data: https://maps.gstatic.com https://www.google.com;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self' https://maps.googleapis.com https://maps.gstatic.com;
+    frame-src https://www.google.com;
+  "
+/>
+    <link rel="icon" type="image/svg+xml" href="/Estate-Agent-Client-side-Web-Application/assets/Logo-Ckl1apcM.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sterling Properties</title>
+    <script type="module" crossorigin src="/Estate-Agent-Client-side-Web-Application/assets/index-Cemo8B4J.js"></script>
+    <link rel="stylesheet" crossorigin href="/Estate-Agent-Client-side-Web-Application/assets/index-DWpKWa_m.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
